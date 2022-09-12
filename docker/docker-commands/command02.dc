@@ -1,1 +1,1 @@
-docker container start -ai 01container
+docker container start 01container
