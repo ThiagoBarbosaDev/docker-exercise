@@ -1,6 +1,5 @@
-FROM node:14
-WORKDIR /mjgargani/puppeteer:trybe1.0
-EXPOSE 3000
-COPY node_modules.tar.gz ./
-COPY /e2e/ ./
+FROM mjgargani/puppeteer:trybe1.0 AS todotests
+WORKDIR /tests
+ADD node_modules.tar.gz .
+COPY ./ ./
 CMD ["npm", "test"]
